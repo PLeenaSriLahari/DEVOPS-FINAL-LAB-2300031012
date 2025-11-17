@@ -16,6 +16,11 @@ public class CourseController {
     @Autowired
     private CourseService service;
 
+    @GetMapping("/")
+    public String home() {
+        return "course home";
+    }
+
     // Add Course
     @PostMapping("/add")
     public Course add(@RequestBody Course course) {
